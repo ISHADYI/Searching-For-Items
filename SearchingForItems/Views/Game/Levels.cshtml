@@ -1,0 +1,85 @@
+﻿@model List<SearchingForItems.Models.GameLevel>
+
+@{
+    ViewData["Title"] = "Выбор локации";
+}
+
+<style>
+
+    .levels-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .level-card {
+        width: 300px;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+
+        .level-card:hover {
+            transform: scale(1.03);
+        }
+
+    .level-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .level-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .locked {
+        opacity: 0.5;
+    }
+
+    .play-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+</style>
+
+<h1>Выберите локацию</h1>
+
+<div class="levels-container">
+
+    @foreach (var level in Model)
+    {
+        <div class="level-card">
+
+            <img src="@level.BackgroundImageUrl" class="level-image" />
+
+            <div class="level-content">
+
+                <h3>@level.Title</h3>
+
+                <a asp-controller="Game"
+                   asp-action="Index"
+                   asp-route-id="@level.Id"
+                   class="btn btn-success play-btn">
+
+                    Играть
+
+                </a>
+
+            </div>
+
+        </div>
+    }
+
+</div>
