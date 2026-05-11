@@ -3,6 +3,34 @@ using SearchingForItems.Models;
 
 public class GameController : Controller
 {
+    public IActionResult Levels()
+    {
+        var levels = new List<GameLevel>
+        {
+            new GameLevel
+            {
+                Id = 1,
+                Title = "Кухня",
+                BackgroundImageUrl = "/images/kitchen.jpg"
+            },
+
+            new GameLevel
+            {
+                Id = 2,
+                Title = "Двор",
+                BackgroundImageUrl = "/images/kitchen.jpg"
+            },
+
+            new GameLevel
+            {
+                Id = 3,
+                Title = "Гостиная",
+                BackgroundImageUrl= "/images/kitchen.jpg"
+            }
+        };
+
+        return View(levels);
+    }
     public IActionResult Index()
     {
         var level = new GameLevel
