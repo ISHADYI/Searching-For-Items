@@ -1,8 +1,149 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@page
+@model dynamic
+@{
+    Layout = null;
 }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">"Это начало нашего проекта!"</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    body{
+        background-image: url(images/flag.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+        padding: 20px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn-main {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-transform: lowercase;
+    }
+    .btn-play {
+        background-color: #ffd405;
+        color: #000000;
+        border: none;
+        border-radius:7px;
+    }
+
+        .btn-play:hover {
+            background-color: #b19302;
+        }
+
+    .btn-login {
+        background-color: #ffffff;
+        color: #000000;
+        border: none; 
+        border-radius: 7px;
+    }
+
+        .btn-login:hover {
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }
+
+   
+    .icon-corner {
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .icon-top-right {
+        top: 20px;
+        right: 20px;
+    }
+
+    .icon-bottom-right {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .icon-link {
+        color: inherit;
+        text-decoration: none;
+    }
+ 
+    .game-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        color: #dedede;
+        margin-bottom: 30px;
+        line-height: 1.4;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .game-subtitle {
+        display: block;
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+    }
+</style>
+
+<div class="main-container">
+
+    <div class="icon-corner icon-top-right">
+        <a href="#" class="icon-link">
+            <i class="fa-regular fa-circle-user"></i>
+        </a>
+    </div>
+
+    <div class="game-title">
+        Игра для изучения осетинского языка
+        <span class="game-subtitle">"Ирон детектив"</span>
+    </div>
+
+    <div class="button-group">
+        <a href="#" class="btn-main btn-play">играть</a>
+        <a href="#" class="btn-main btn-login">войти</a>
+    </div>
+
+
+    <div class="icon-corner icon-bottom-right">
+        <a href="#" class="icon-link">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+        <a href="#" class="icon-link">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+    </div>
+
 </div>
+
