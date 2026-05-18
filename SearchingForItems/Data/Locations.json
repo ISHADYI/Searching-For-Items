@@ -2,8 +2,8 @@
   {
     "Id": 1,
     "Title": "Кухня",
-    "BackgroundImageUrl": "/images/kitchen.jpg",
-    "Worlds": {
+    "BackgroundImageUrl": "/images/kitchen.png",
+    "Words": [
       {
         "Id": 1,
         "Ossetian": "Къухмæрзæн",
@@ -18,13 +18,13 @@
         "Top": 65,
         "Left": 60
       }
-    }
+    ]
   },
   {
     "Id": 2,
     "Title": "Двор",
-    "BackgroundImageUrl": "/images/kitchen.jpg",
-    "Worlds": {
+    "BackgroundImageUrl": "/images/livingRoom.png",
+    "Words": [
       {
         "Id": 1,
         "Ossetian": "Къухмæрзæн",
@@ -39,13 +39,13 @@
         "Top": 65,
         "Left": 60
       }
-    }
+    ]
   },
   {
     "Id": 3,
     "Title": "Двор",
-    "BackgroundImageUrl": "/images/kitchen.jpg",
-    "Worlds": {
+    "BackgroundImageUrl": "/images/yard.png",
+    "Words": [
       {
         "Id": 1,
         "Ossetian": "Къухмæрзæн",
@@ -60,6 +60,6 @@
         "Top": 65,
         "Left": 60
       }
-    }
+    ]
   }
 ]
