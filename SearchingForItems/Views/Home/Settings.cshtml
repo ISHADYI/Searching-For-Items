@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background-image: url('/images/flag.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .settings-panel {
+        width: 450px;
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .settings-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .setting-item {
+        margin-bottom: 20px;
+    }
+
+    .setting-label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    select,
+    input[type="range"] {
+        width: 100%;
+    }
+
+    .back-btn {
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+        .back-btn:hover {
+            color: black;
+        }
+
+</style>
+
+<div class="settings-panel">
+
+    <div class="settings-title">
+        ⚙ Настройки
+    </div>
+
+    <div class="setting-item">
+        <label class="setting-label">
+            Язык интерфейса
+        </label>
+
+        <select>
+            <option>Русский</option>
+            <option>Осетинский</option>
+        </select>
+    </div>
+
+    <div class="setting-item">
+        <label class="setting-label">
+            Громкость музыки
+        </label>
+
+        <input type="range" min="0" max="100" value="70">
+    </div>
+
+    <div class="setting-item">
+        <label class="setting-label">
+            Громкость звуков
+        </label>
+
+        <input type="range" min="0" max="100" value="80">
+    </div>
+    <a href="/" class="back-btn">
+        ← Вернуться в меню
+    </a>
+
+</div>
