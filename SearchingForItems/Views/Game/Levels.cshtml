@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Выбор локации";
+    Layout = "_GameLayout";
 }
 
 <style>
@@ -52,8 +53,20 @@
         margin-top: 30px;
     }
 
+    .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+    }
+
 </style>
 
+<a asp-controller="Home"
+   asp-action="Index"
+   class="btn btn-success back-btn">
+    ← Меню
+</a>
 <h1>Выберите локацию</h1>
 
 <div class="levels-container">
