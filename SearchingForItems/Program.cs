@@ -1,4 +1,9 @@
+using SearchingForItems.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<LocationRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
