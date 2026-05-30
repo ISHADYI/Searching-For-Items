@@ -1,10 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
+using SearchingForItems.Data;
 using SearchingForItems.Models;
 using System.Text.Json;
 
 public class GameController : Controller
 {
+    LocationRepository locationRepository;
+
+    public GameController(LocationRepository locationRepository)
+    {
+        this.locationRepository = locationRepository;
+    }
     public IActionResult Levels()
     {
         //var levels = new List<GameLevel>
@@ -31,9 +38,7 @@ public class GameController : Controller
         //    }
         //};
 
-        string jsonString = System.IO.File.ReadAllText("Data/Locations.json");
-        var levels = JsonSerializer.Deserialize<List<GameLevel>>(jsonString);
-
+        List<GameLevel> levels = locationRepository.GetAll();
         return View(levels);
     }
     public IActionResult Index(int id)
