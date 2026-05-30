@@ -12,30 +12,43 @@
         background-image: url('@Model.BackgroundImageUrl');
         background-size: cover;
         border: 5px solid #333;
+        cursor: pointer;
     }
+
     .hidden-item {
         position: absolute;
         cursor: pointer;
         transition: transform 0.2s;
         width: 50px;
     }
-    .hidden-item:hover { transform: scale(1.2); }
-    .found { display: none; }
-    .word-found { text-decoration: line-through; color: red; }
+
+        .hidden-item:hover {
+            transform: scale(1.2);
+        }
+
+    .found {
+        display: none;
+    }
+
+    .word-found {
+        text-decoration: line-through;
+        color: red;
+    }
 </style>
 
 <div class="container">
     <h2>@Model.Title</h2>
-    
+
     <div class="row">
         <div class="col-md-9">
-            <div class="game-area" id="gameField">
+            <div class="game-area" id="gameField" onclick="onBackgroundClick(event)">
                 @foreach (var word in Model.Words)
                 {
                     <img src="@word.ImageUrl"
                          class="hidden-item"
                          style="top: @word.Top%; left: @word.Left%;"
-                         onclick="checkItem(this, '@word.Id')" />
+                         data-id="@word.Id"
+                         onclick="onItemClick(event, this, '@word.Id')" />
                 }
             </div>
         </div>
@@ -63,14 +76,42 @@
     let isPaused = false;
     let timeLeft = 60;
 
-    function checkItem(element, id) {
+    async function callControllerProcessClick(isRight) {
+        try {
+            const response = await fetch('/Game/ProcessClick', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(isRight) 
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                score = data.newScore;
+                document.getElementById('score').innerText = score;
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+        }
+    }
+
+    async function onItemClick(event, element, id) {
+        event.stopPropagation();
+
         if(isPaused) return;
+        if(element.classList.contains('found')) return;
+
+        await callControllerProcessClick(true);
 
         element.classList.add('found');
         document.getElementById('li-' + id).classList.add('word-found');
-        
-        score += 10;
-        document.getElementById('score').innerText = score;
+    }
+
+    async function onBackgroundClick(event) {
+        if(event.target.id !== 'gameField') return;
+        if(isPaused) return;
+        await callControllerProcessClick(false);
     }
 
     setInterval(function() {
