@@ -6,17 +6,83 @@
     "Words": [
       {
         "Id": 1,
-        "Ossetian": "Къухмæрзæн",
+        "Ossetian": "Дзул",
+        "Russian": "Хлеб",
         "ImageUrl": "/images/towel.png",
-        "Top": 30,
-        "Left": 60
+        "Top": 40,
+        "Left": 20
       },
       {
         "Id": 2,
-        "Ossetian": "Чырыг",
-        "ImageUrl": "/images/box.png",
-        "Top": 65,
+        "Ossetian": "Цыхт",
+        "Russian": "Сыр",
+        "ImageUrl": "/images/towel.png",
+        "Top": 45,
+        "Left": 35
+      },
+      {
+        "Id": 3,
+        "Ossetian": "Кастрюля",
+        "Russian": "Агг",
+        "ImageUrl": "/images/towel.png",
+        "Top": 35,
         "Left": 60
+      },
+      {
+        "Id": 4,
+        "Ossetian": "Нас",
+        "Russian": "Тыква",
+        "ImageUrl": "/images/towel.png",
+        "Top": 65,
+        "Left": 15
+      },
+      {
+        "Id": 5,
+        "Ossetian": "Сахат",
+        "Russian": "Часы",
+        "ImageUrl": "/images/towel.png",
+        "Top": 15,
+        "Left": 45
+      },
+      {
+        "Id": 6,
+        "Ossetian": "Фæткъуы",
+        "Russian": "Яблоки",
+        "ImageUrl": "/images/towel.png",
+        "Top": 50,
+        "Left": 75
+      },
+      {
+        "Id": 7,
+        "Ossetian": "Кард",
+        "Russian": "Нож",
+        "ImageUrl": "/images/towel.png",
+        "Top": 55,
+        "Left": 50
+      },
+      {
+        "Id": 8,
+        "Ossetian": "Кружкæ",
+        "Russian": "Кружка",
+        "ImageUrl": "/images/towel.png",
+        "Top": 38,
+        "Left": 80
+      },
+      {
+        "Id": 9,
+        "Ossetian": "Баклажан",
+        "Russian": "Баклажан",
+        "ImageUrl": "/images/towel.png",
+        "Top": 70,
+        "Left": 40
+      },
+      {
+        "Id": 10,
+        "Ossetian": "Мыст",
+        "Russian": "Мышка",
+        "ImageUrl": "/images/towel.png",
+        "Top": 85,
+        "Left": 70
       }
     ]
   },
@@ -27,17 +93,75 @@
     "Words": [
       {
         "Id": 1,
-        "Ossetian": "Къухмæрзæн",
-        "ImageUrl": "/images/towel.png",
-        "Top": 30,
-        "Left": 60
+        "Ossetian": "Æлвыст",
+        "Russian": "Пряжа",
+        "ImageUrl": "/images/box.png",
+        "Top": 20,
+        "Left": 15
       },
       {
         "Id": 2,
-        "Ossetian": "Чырыг",
+        "Ossetian": "Ныв",
+        "Russian": "Картина",
+        "ImageUrl": "/images/box.png",
+        "Top": 15,
+        "Left": 50
+      },
+      {
+        "Id": 3,
+        "Ossetian": "Бедын",
+        "Russian": "Кресло",
+        "ImageUrl": "/images/box.png",
+        "Top": 60,
+        "Left": 25
+      },
+      {
+        "Id": 4,
+        "Ossetian": "Рухсгæнæн",
+        "Russian": "Светильник",
+        "ImageUrl": "/images/box.png",
+        "Top": 25,
+        "Left": 80
+      },
+      {
+        "Id": 5,
+        "Ossetian": "Кæсæнцæстытæ",
+        "Russian": "Очки",
+        "ImageUrl": "/images/box.png",
+        "Top": 55,
+        "Left": 45
+      },
+      {
+        "Id": 6,
+        "Ossetian": "Фыстæг",
+        "Russian": "Письмо",
+        "ImageUrl": "/images/box.png",
+        "Top": 70,
+        "Left": 50
+      },
+      {
+        "Id": 7,
+        "Ossetian": "Баз",
+        "Russian": "Подушка",
         "ImageUrl": "/images/box.png",
         "Top": 65,
-        "Left": 60
+        "Left": 15
+      },
+      {
+        "Id": 8,
+        "Ossetian": "Цырагъ",
+        "Russian": "Свеча",
+        "ImageUrl": "/images/box.png",
+        "Top": 40,
+        "Left": 75
+      },
+      {
+        "Id": 9,
+        "Ossetian": "Дæгъæл",
+        "Russian": "Ключ",
+        "ImageUrl": "/images/box.png",
+        "Top": 80,
+        "Left": 35
       }
     ]
   },
@@ -48,17 +172,83 @@
     "Words": [
       {
         "Id": 1,
-        "Ossetian": "Къухмæрзæн",
-        "ImageUrl": "/images/towel.png",
-        "Top": 30,
-        "Left": 60
+        "Ossetian": "Фонтан",
+        "Russian": "Фонтан",
+        "ImageUrl": "/images/box.png",
+        "Top": 45,
+        "Left": 50
       },
       {
         "Id": 2,
-        "Ossetian": "Чырыг",
+        "Ossetian": "Цъай",
+        "Russian": "Колодец",
+        "ImageUrl": "/images/box.png",
+        "Top": 50,
+        "Left": 15
+      },
+      {
+        "Id": 3,
+        "Ossetian": "Ахсæн",
+        "Russian": "Скворечник",
+        "ImageUrl": "/images/box.png",
+        "Top": 15,
+        "Left": 75
+      },
+      {
+        "Id": 4,
+        "Ossetian": "Уис",
+        "Russian": "Метла",
         "ImageUrl": "/images/box.png",
         "Top": 65,
-        "Left": 60
+        "Left": 80
+      },
+      {
+        "Id": 5,
+        "Ossetian": "Тæскъ",
+        "Russian": "Корзина",
+        "ImageUrl": "/images/box.png",
+        "Top": 75,
+        "Left": 65
+      },
+      {
+        "Id": 6,
+        "Ossetian": "Сугтæ",
+        "Russian": "Дрова",
+        "ImageUrl": "/images/box.png",
+        "Top": 70,
+        "Left": 25
+      },
+      {
+        "Id": 7,
+        "Ossetian": "Уæрдон",
+        "Russian": "Повозка",
+        "ImageUrl": "/images/box.png",
+        "Top": 55,
+        "Left": 35
+      },
+      {
+        "Id": 8,
+        "Ossetian": "Дзабри",
+        "Russian": "Лейка",
+        "ImageUrl": "/images/box.png",
+        "Top": 80,
+        "Left": 10
+      },
+      {
+        "Id": 9,
+        "Ossetian": "Халамæрзæн",
+        "Russian": "Грабли",
+        "ImageUrl": "/images/box.png",
+        "Top": 60,
+        "Left": 90
+      },
+      {
+        "Id": 10,
+        "Ossetian": "Чырын",
+        "Russian": "Сундук",
+        "ImageUrl": "/images/box.png",
+        "Top": 40,
+        "Left": 70
       }
     ]
   }
