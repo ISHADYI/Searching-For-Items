@@ -17,5 +17,10 @@ namespace SearchingForItems.Data
         {
             return levels;
         }
+
+        public GameLevel TryGetById(int id)
+        {
+            return levels.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

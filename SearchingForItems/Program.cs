@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<LocationRepository>();
+builder.Services.AddSingleton<UserRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

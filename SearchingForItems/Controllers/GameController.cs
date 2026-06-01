@@ -1,61 +1,58 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
 using SearchingForItems.Data;
 using SearchingForItems.Models;
-using System.Text.Json;
 
-public class GameController : Controller
+namespace SearchingForItems.Controllers
 {
-    LocationRepository locationRepository;
-
-    public GameController(LocationRepository locationRepository)
+    public class GameController : Controller
     {
-        this.locationRepository = locationRepository;
-    }
-    public IActionResult Levels()
-    {
-        //var levels = new List<GameLevel>
-        //{
-        //    new GameLevel
-        //    {
-        //        Id = 1,
-        //        Title = "Кухня",
-        //        BackgroundImageUrl = "/images/kitchen.jpg"
-        //    },
+        private LocationRepository _locationRepository;
+        private UserRepository _userRepository;
 
-        //    new GameLevel
-        //    {
-        //        Id = 2,
-        //        Title = "Двор",
-        //        BackgroundImageUrl = "/images/kitchen.jpg"
-        //    },
+        public GameController(LocationRepository locationRepository, UserRepository userRepository)
+        {
+            _locationRepository = locationRepository;
+            _userRepository = userRepository;
+        }
 
-        //    new GameLevel
-        //    {
-        //        Id = 3,
-        //        Title = "Гостиная",
-        //        BackgroundImageUrl= "/images/kitchen.jpg"
-        //    }
-        //};
+        public IActionResult Levels()
+        {
+            List<GameLevel> levels = _locationRepository.GetAll();
+            return View(levels);
+        }
 
-        List<GameLevel> levels = locationRepository.GetAll();
-        return View(levels);
-    }
-    public IActionResult Index(int id)
-    {
-        //var level = new GameLevel
-        //{
-        //    Title = "Тайная комната (Уровень 1)",
-        //    BackgroundImageUrl = "/images/kitchen.jpg",
-        //    Words = new List<Word> {
-        //        new Word { Id = 1, Ossetian = "Къухмæрзæн", Top = 60, Left = 30, ImageUrl = "/images/towel.png" },
-        //        new Word { Id = 2, Ossetian = "Чырыг", Top = 65, Left = 60, ImageUrl = "/images/box.png" }
-        //    }
-        //};
-        string jsonString = System.IO.File.ReadAllText("Data/Locations.json");
-        var levels = JsonSerializer.Deserialize<List<GameLevel>>(jsonString);
-        var level = levels.FirstOrDefault(x=>x.Id == id);
+        public IActionResult Index(int id)
+        {
+            _userRepository.ResetScore();
 
-        return View("Game", level);
+            var level = _locationRepository.TryGetById(id);
+            return View("Game", level);
+        }
+
+        [HttpPost]
+        public IActionResult ProcessClick([FromBody] bool isRight)
+        {
+            User currentUser = _userRepository.GetCurrentUser();
+            int currentScore = currentUser.Score;
+
+            if (isRight)
+            {
+                _userRepository.AddScore(10);
+                currentScore += 10;
+            }
+            else
+            {
+                _userRepository.SubtractScore(5);
+                currentScore -= 5;
+            }
+            return Ok(new { newScore = currentScore });
+        }
+
+        [HttpGet]
+        public IActionResult GetCurrentScore()
+        {
+            User currentUser = _userRepository.GetCurrentUser();
+            return Ok(new { score = currentUser.Score });
+        }
     }
 }
