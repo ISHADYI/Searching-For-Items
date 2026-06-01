@@ -56,7 +56,7 @@
         cursor: pointer;
         padding: 0;
 
-        image-rendering: pixelated;
+        /* image-rendering: pixelated; */
         transition: transform 0.1s ease, filter 0.1s ease;
     }
 
@@ -80,21 +80,25 @@
         background-position: center;
         cursor: pointer;
         padding: 0;
-        image-rendering: pixelated;
+        /* image-rendering: pixelated; */
         transition: transform 0.1s ease, filter 0.1s ease;
     }
 
     .play-btn {
-        background-image: url('images/play-btn.png');
+        background-image: url('images/buttons/play-btn.png');
     }
     .rules-btn {
-        background-image: url('images/rules-btn.png');
+        background-image: url('images/buttons/rules-btn.png');
     }
     .sound-btn {
-        background-image: url('images/sound-btn.png');
+        background-image: url('images/buttons/sound-btn.png');
     }
     .music-btn {
-        background-image: url('images/music-btn.png');
+        background-image: url('images/buttons/music-btn.png');
+    }
+
+    .account-btn{
+        background-image: url('images/buttons/user-btn.png');
     }
 
     .music-btn.off::after {
@@ -134,6 +138,7 @@
     <div class="settings-btns">
         <button class="setting-btn sound-btn" aria-label="Звуковые эффекты"></button>
         <button id="toggleMusic" class="setting-btn music-btn off" aria-label="Фоновая музыка"></button>
+        <button class="setting-btn account-btn" aria-label="Аккаунт"></button>
     </div>
     <div class="menu-btns">
         <a href="/Game/Levels" class="menu-btn play-btn" aria-label="Играть"></a>

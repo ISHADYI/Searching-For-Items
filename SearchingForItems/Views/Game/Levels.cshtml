@@ -52,7 +52,7 @@
         background-position: center;
         cursor: pointer;
         padding: 0;
-        image-rendering: pixelated;
+        /* image-rendering: pixelated; */
         transition: transform 0.1s ease, filter 0.1s ease;
     }
 
@@ -74,12 +74,17 @@
         filter: brightness(0.90);
     }
 
-    .levels-grid {
+    .levels-cards {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 12px;
-        margin-top: 50px;
-        padding: 0 15px;
+        width: 90%;
+        z-index: 1;
     }
 
     .level-card {
@@ -92,20 +97,20 @@
         background-position: center;
         cursor: pointer;
         padding: 0;
-        image-rendering: pixelated;
+        /* image-rendering: pixelated; */
         transition: transform 0.1s ease, filter 0.1s ease;
     }
 
     .level-kitchen {
-        background-image: url('images/level-1.png');
+        background-image: url('/images/levelSelection/kitchen.png');
     }
 
     .level-livingroom {
-        background-image: url('images/level-2.png');
+        background-image: url('/images/levelSelection/living-room.png');
     }
 
     .level-yard {
-        background-image: url('images/level-3.png');
+        background-image: url('/images/levelSelection/yard.png');
     }
 
     .level-card:hover {
@@ -139,7 +144,7 @@
         background-position: center;
         cursor: pointer;
         padding: 0;
-        image-rendering: pixelated;
+        /* image-rendering: pixelated; */
         transition: transform 0.1s ease, filter 0.1s ease;
     }
 
@@ -164,7 +169,7 @@
         <button class="setting-btn music-btn" aria-label="Фоновая музыка"></button>
     </div>
 
-    <div class="levels-grid">
+    <div class="levels-cards">
         <a class="level-card level-kitchen"></a>
         <a class="level-card level-livingroom"></a>
         <a class="level-card level-yard"></a>
