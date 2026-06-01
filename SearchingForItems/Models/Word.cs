@@ -9,6 +9,7 @@
         public string ImageUrl { get; set; }
         public int Top { get; set; }
         public int Left { get; set; }
+        public int Width { get; set; }
         public bool IsFound { get; set; } = false;
 
 

@@ -2,94 +2,104 @@
   {
     "Id": 1,
     "Title": "Кухня",
-    "BackgroundImageUrl": "/images/kitchen.png",
+    "BackgroundImageUrl": "/images/levels/kitchen-loc.png",
     "Words": [
       {
         "Id": 1,
         "Ossetian": "Дзул",
         "Russian": "Хлеб",
-        "ImageUrl": "/images/towel.png",
-        "Top": 40,
-        "Left": 20
+        "ImageUrl": "/images/levelItems/kitchenItem/bread.png",
+        "Top": 47,
+        "Left": 42,
+        "Width": 14
       },
       {
         "Id": 2,
         "Ossetian": "Цыхт",
         "Russian": "Сыр",
-        "ImageUrl": "/images/towel.png",
-        "Top": 45,
-        "Left": 35
+        "ImageUrl": "/images/levelItems/kitchenItem/chees.png",
+        "Top": 49,
+        "Left": 35,
+        "Width": 9
       },
       {
         "Id": 3,
         "Ossetian": "Кастрюля",
         "Russian": "Агг",
-        "ImageUrl": "/images/towel.png",
-        "Top": 35,
-        "Left": 60
+        "ImageUrl": "/images/levelItems/kitchenItem/pot.png",
+        "Top": 30,
+        "Left": 4,
+        "Width": 17
       },
       {
         "Id": 4,
         "Ossetian": "Нас",
         "Russian": "Тыква",
-        "ImageUrl": "/images/towel.png",
-        "Top": 65,
-        "Left": 15
+        "ImageUrl": "/images/levelItems/kitchenItem/pumpkin.png",
+        "Top": 89,
+        "Left": 40,
+        "Width": 14
       },
       {
         "Id": 5,
         "Ossetian": "Сахат",
         "Russian": "Часы",
-        "ImageUrl": "/images/towel.png",
-        "Top": 15,
-        "Left": 45
+        "ImageUrl": "/images/levelItems/kitchenItem/watch.png",
+        "Top": 3,
+        "Left": 35,
+        "Width": 8
       },
       {
         "Id": 6,
         "Ossetian": "Фæткъуы",
         "Russian": "Яблоки",
-        "ImageUrl": "/images/towel.png",
-        "Top": 50,
-        "Left": 75
+        "ImageUrl": "/images/levelItems/kitchenItem/apples.png",
+        "Top": 26,
+        "Left": 36,
+        "Width": 15
       },
       {
         "Id": 7,
         "Ossetian": "Кард",
         "Russian": "Нож",
-        "ImageUrl": "/images/towel.png",
-        "Top": 55,
-        "Left": 50
+        "ImageUrl": "/images/levelItems/kitchenItem/knife.png",
+        "Top": 56,
+        "Left": 44,
+        "Width": 11
       },
       {
         "Id": 8,
         "Ossetian": "Кружкæ",
         "Russian": "Кружка",
-        "ImageUrl": "/images/towel.png",
-        "Top": 38,
-        "Left": 80
+        "ImageUrl": "/images/levelItems/kitchenItem/cup.png",
+        "Top": 47,
+        "Left": 70,
+        "Width": 8
       },
       {
         "Id": 9,
         "Ossetian": "Баклажан",
         "Russian": "Баклажан",
-        "ImageUrl": "/images/towel.png",
-        "Top": 70,
-        "Left": 40
+        "ImageUrl": "/images/levelItems/kitchenItem/eggplant.png",
+        "Top": 96,
+        "Left": 69,
+        "Width": 12
       },
       {
         "Id": 10,
         "Ossetian": "Мыст",
         "Russian": "Мышка",
-        "ImageUrl": "/images/towel.png",
-        "Top": 85,
-        "Left": 70
+        "ImageUrl": "/images/levelItems/kitchenItem/mouse.png",
+        "Top": 83,
+        "Left": 42,
+        "Width": 6
       }
     ]
   },
   {
     "Id": 2,
     "Title": "Гостинная",
-    "BackgroundImageUrl": "/images/livingRoom.png",
+    "BackgroundImageUrl": "/images/levels/living-room-loc.png",
     "Words": [
       {
         "Id": 1,
@@ -168,7 +178,7 @@
   {
     "Id": 3,
     "Title": "Двор",
-    "BackgroundImageUrl": "/images/yard.png",
+    "BackgroundImageUrl": "/images/levels/yard-loc.png",
     "Words": [
       {
         "Id": 1,
