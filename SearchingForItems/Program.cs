@@ -1,10 +1,12 @@
 using SearchingForItems.Data;
+using SearchingForItems.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<LocationRepository>();
 builder.Services.AddSingleton<UserRepository>();
+builder.Services.AddSingleton<ApiService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
