@@ -1,40 +1,119 @@
 ﻿@model SearchingForItems.Models.GameLevel
 
 @{
+    // переделать тайтл
     ViewData["Title"] = "Тайная комната";
+    Layout = null;
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 <style>
-    .game-area {
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #141C30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+
+    .main-container {
         position: relative;
-        width: 100%;
-        height: 500px;
+        background-color: #1a243d;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        height: 95vh;
+        max-width: 90vw;
+    }
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        color: #FB8714;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    .game-wrapper {
+        position: relative;
+        height: 65vh;
+        aspect-ratio: 1256 / 2096;
+        margin: 0 auto;
+    }
+    .game-area {
+        position: absolute;
+        top: 4.2%;
+        bottom: 4.2%;
+        left: 7%;
+        right: 7%;
         background-image: url('@Model.BackgroundImageUrl');
-        background-size: cover;
-        border: 5px solid #333;
+        background-size: 100% 100%;
+        background-position: center;
         cursor: pointer;
+    }
+    .game-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/lvl-frame.png');
+        background-size: 100% 100%;
+        image-rendering: pixelated;
+        z-index: 10;
+        pointer-events: none;
     }
 
     .hidden-item {
         position: absolute;
         cursor: pointer;
         transition: transform 0.2s;
-        width: 50px;
+        width: 4%;
+        z-index: 5;
     }
 
-        .hidden-item:hover {
-            transform: scale(1.2);
-        }
+    .hidden-item:hover {
+        transform: scale(1.2);
+    }
 
     .found {
         display: none;
     }
 
-    .word-found {
-        text-decoration: line-through;
-        color: red;
+    .words-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 20px;
     }
 
+    .word-btn {
+        border: 3px solid #FB8714;
+        background-color: #FDC52C;
+        color: #141414;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 10px;
+        padding: 8px 5px;
+        text-align: center;
+        line-height: 1.2;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .word-found {
+        background-color: #FB8714;
+        color: #141C30;
+    }
     .modal {
         display: none;
         position: fixed;
@@ -112,38 +191,31 @@
         }
 </style>
 
-<div class="container">
-    <h2>@Model.Title</h2>
+<div class="main-container">
+    <div class="top-bar">
+        <div>Рæстæг: <span id="timer">60</span></div>
+        <div>Счет: <span id="score">0</span></div>
+    </div>
 
-    <div class="row">
-        <div class="col-md-9">
-            <div class="game-area" id="gameField" onclick="onBackgroundClick(event)">
-                @foreach (var word in Model.Words)
-                {
-                    <img src="@word.ImageUrl"
-                         class="hidden-item"
-                         style="top: @word.Top%; left: @word.Left%;"
-                         data-id="@word.Id"
-                         onclick="onItemClick(event, this, '@word.Id')" />
-                }
-            </div>
+    <div class="game-wrapper">
+        <div class="game-area" id="gameField" onclick="onBackgroundClick(event)">
+            @foreach (var word in Model.Words)
+            {
+                <img src="@word.ImageUrl"
+                     class="hidden-item"
+                     style="top: @word.Top%; left: @word.Left%; width: @word.Width%;"
+                     data-id="@word.Id"
+                     onclick="onItemClick(event, this, '@word.Id')" />
+            }
         </div>
+        <div class="game-frame"></div>
+    </div>
 
-        <div class="col-md-3">
-            <div class="panel">
-                <h4>Рæстæг: <span id="timer">60</span></h4>
-                <h4>Счет: <span id="score">0</span></h4>
-                <hr />
-                <h5>Саттæгтæ (Найти):</h5>
-                <ul id="wordList">
-                    @foreach (var word in Model.Words)
-                    {
-                        <li id="li-@word.Id">@word.Ossetian</li>
-                    }
-                </ul>
-                <button class="btn btn-warning" onclick="togglePause()">Паузæ</button>
-            </div>
-        </div>
+    <div class="words-grid" id="wordList">
+        @foreach (var word in Model.Words)
+        {
+            <div class="word-btn" id="li-@word.Id">@word.Ossetian</div>
+        }
     </div>
 </div>
 
