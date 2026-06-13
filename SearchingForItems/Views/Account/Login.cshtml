@@ -1,0 +1,71 @@
+﻿@model SearchingForItems.Models.Login
+
+@{
+    Layout = null;
+}
+
+<style>
+    body {
+        background: #141C30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+    }
+
+    .login-box {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        width: 350px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background: #ffd405;
+        border: none;
+        cursor: pointer;
+    }
+
+    .error {
+        color: red;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="login-box">
+
+    <h2>Вход</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="error">
+            @ViewBag.Error
+        </div>
+    }
+
+    <form asp-action="Login" method="post">
+
+        <input asp-for="Email"
+               placeholder="Email" />
+
+        <input asp-for="Password"
+               type="password"
+               placeholder="Пароль" />
+
+        <button type="submit">
+            Войти
+        </button>
+
+    </form>
+
+</div>

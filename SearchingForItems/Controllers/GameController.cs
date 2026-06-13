@@ -57,8 +57,6 @@ namespace SearchingForItems.Controllers
             User currentUser = _userRepository.GetCurrentUser();
             return Ok(new { score = currentUser.Score });
         }
-
-        // Данный метод тестовый, чтобы показать как начислять баллы пользователю в конце уровня
         public async Task<IActionResult> AddPointsUser()
         {
             // Получаем id пользователя из сессии

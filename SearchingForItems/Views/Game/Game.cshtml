@@ -249,6 +249,7 @@
     let timerInterval;
 
     function openWinModal() {
+            await fetch('/Game/AddPointsUser?score=' + score);
         const modal = document.getElementById('winModal');
         const finalScoreSpan = document.getElementById('finalScore');
         finalScoreSpan.innerText = score;
