@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using DotNetEnv;
+using System.Text;
 using System.Text.Json;
 
 namespace SearchingForItems.Services
@@ -21,17 +22,7 @@ namespace SearchingForItems.Services
         /// </summary>
         private static string LoadApiKeyFromEnv()
         {
-            string envPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".env");
-
-            if (!File.Exists(envPath))
-                throw new FileNotFoundException(".env файл не найден. Создайте файл .env с содержимым: API_KEY=ваш_ключ");
-
-            var lines = File.ReadAllLines(envPath);
-            foreach (var line in lines)
-                if (line.StartsWith("API_KEY="))
-                    return line.Substring(8).Trim();
-
-            throw new Exception("API_KEY не найден в .env файле");
+            return Env.GetString("API_KEY");
         }
 
         /// <summary>
@@ -88,7 +79,7 @@ namespace SearchingForItems.Services
             return JsonSerializer.Deserialize<PointsResponse>(responseContent);
         }
 
-        public async Task<bool> AddPointsAsync(string userId, string gameId, int amount)
+        public async Task<bool> AddPointsAsync(string userId, int gameId, int amount)
         {
             var pointsData = new { amount = amount };
             var json = JsonSerializer.Serialize(pointsData);

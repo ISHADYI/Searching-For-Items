@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SearchingForItems.Data;
 using SearchingForItems.Models;
+using SearchingForItems.Services;
 
 namespace SearchingForItems.Controllers
 {
@@ -8,11 +9,13 @@ namespace SearchingForItems.Controllers
     {
         private LocationRepository _locationRepository;
         private UserRepository _userRepository;
+        private readonly ApiService? api;
 
-        public GameController(LocationRepository locationRepository, UserRepository userRepository)
+        public GameController(LocationRepository locationRepository, UserRepository userRepository, ApiService? api)
         {
             _locationRepository = locationRepository;
             _userRepository = userRepository;
+            this.api = api;
         }
 
         public IActionResult Levels()
@@ -53,6 +56,19 @@ namespace SearchingForItems.Controllers
         {
             User currentUser = _userRepository.GetCurrentUser();
             return Ok(new { score = currentUser.Score });
+        }
+
+        // Данный метод тестовый, чтобы показать как начислять баллы пользователю в конце уровня
+        public async Task<IActionResult> AddPointsUser()
+        {
+            // Получаем id пользователя из сессии
+            var userId = HttpContext.Session.GetString("UserId");
+
+            // Начисляем баллы пользователю
+            var result = await api.AddPointsAsync(userId, 11, 5); // 11 - это id игры на сайте он постоянный
+            if (result == true)
+                return Ok();
+            return BadRequest();
         }
     }
 }
