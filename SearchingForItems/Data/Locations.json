@@ -78,7 +78,7 @@
       },
       {
         "Id": 9,
-        "Ossetian": "Баклажан",
+        "Ossetian": "Бадырджан",
         "Russian": "Баклажан",
         "ImageUrl": "/images/levelItems/kitchenItem/eggplant.png",
         "Top": 96,
@@ -119,7 +119,7 @@
       },
       {
         "Id": 3,
-        "Ossetian": "Бедын",
+        "Ossetian": "Бадын",
         "Russian": "Кресло",
         "ImageUrl": "/images/box.png",
         "Top": 60,

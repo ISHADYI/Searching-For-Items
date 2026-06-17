@@ -1,16 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using SearchingForItems.Models;
 using System.Diagnostics;
+using SearchingForItems.Services;
+
 
 namespace SearchingForItems.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApiService? api;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApiService? api)
         {
             _logger = logger;
+            this.api = api;
         }
 
         public IActionResult Index()
@@ -22,6 +26,8 @@ namespace SearchingForItems.Controllers
         {
             return View();
         }
+
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

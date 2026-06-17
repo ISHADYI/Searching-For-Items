@@ -1,10 +1,24 @@
+using DotNetEnv;
 using SearchingForItems.Data;
+using SearchingForItems.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Env.Load();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<LocationRepository>();
 builder.Services.AddSingleton<UserRepository>();
+builder.Services.AddSingleton<ApiService>();
+
+builder.Services.AddDistributedMemoryCache(); // Для хранения сессий в памяти
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -24,6 +38,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(
