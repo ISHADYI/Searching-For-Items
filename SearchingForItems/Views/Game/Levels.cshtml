@@ -146,7 +146,7 @@
     }
 
     .back-btn {
-        background-image: url('/images/back-btn.png');
+        background-image: url('/images/buttons/back-btn.png');
     }
 
     .menu-btn:hover {
@@ -168,8 +168,8 @@
 
     <div class="levels-cards">
         <a asp-controller="Game" asp-action="Index" asp-route-id="1" class="level-card level-kitchen"></a>
-        <a class="level-card level-livingroom"></a>
-        <a class="level-card level-yard"></a>
+        <a asp-controller="Game" asp-action="Index" asp-route-id="2" class="level-card level-livingroom"></a>
+        <a asp-controller="Game" asp-action="Index" asp-route-id="3" class="level-card level-yard"></a>
     </div>
 
     <div class="menu-btns">
