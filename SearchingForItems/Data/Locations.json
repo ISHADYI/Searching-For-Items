@@ -105,73 +105,82 @@
         "Id": 1,
         "Ossetian": "Æлвыст",
         "Russian": "Пряжа",
-        "ImageUrl": "/images/box.png",
-        "Top": 20,
-        "Left": 15
+        "ImageUrl": "/images/levelItems/livingRoomItem/yarn.png",
+        "Top": 67,
+        "Left": 78,
+        "Width": 21
       },
       {
         "Id": 2,
         "Ossetian": "Ныв",
         "Russian": "Картина",
-        "ImageUrl": "/images/box.png",
-        "Top": 15,
-        "Left": 50
+        "ImageUrl": "/images/levelItems/livingRoomItem/picture.png",
+        "Top": 5,
+        "Left": 13,
+        "Width": 18
       },
       {
         "Id": 3,
         "Ossetian": "Бедын",
         "Russian": "Кресло",
-        "ImageUrl": "/images/box.png",
-        "Top": 60,
-        "Left": 25
+        "ImageUrl": "/images/levelItems/livingRoomItem/armchair.png",
+        "Top": 30,
+        "Left": 58,
+        "Width": 42
       },
       {
         "Id": 4,
         "Ossetian": "Рухсгæнæн",
         "Russian": "Светильник",
-        "ImageUrl": "/images/box.png",
-        "Top": 25,
-        "Left": 80
+        "ImageUrl": "/images/levelItems/livingRoomItem/luminaire.png",
+        "Top": 36,
+        "Left": 89,
+        "Width": 11
       },
       {
         "Id": 5,
-        "Ossetian": "Кæсæнцæстытæ",
-        "Russian": "Очки",
-        "ImageUrl": "/images/box.png",
-        "Top": 55,
-        "Left": 45
+        "Ossetian": "Арс",
+        "Russian": "Медведь",
+        "ImageUrl": "/images/levelItems/livingRoomItem/bear.png",
+        "Top": 67,
+        "Left": 19,
+        "Width": 16
       },
       {
         "Id": 6,
         "Ossetian": "Фыстæг",
         "Russian": "Письмо",
-        "ImageUrl": "/images/box.png",
-        "Top": 70,
-        "Left": 50
+        "ImageUrl": "/images/levelItems/livingRoomItem/letter.png",
+        "Top": 60,
+        "Left": 50,
+        "Width": 10
       },
       {
         "Id": 7,
         "Ossetian": "Баз",
         "Russian": "Подушка",
-        "ImageUrl": "/images/box.png",
-        "Top": 65,
-        "Left": 15
+        "ImageUrl": "/images/levelItems/livingRoomItem/pillow.png",
+        "Top": 72,
+        "Left": 3,
+        "Width": 23
       },
       {
         "Id": 8,
         "Ossetian": "Цырагъ",
         "Russian": "Свеча",
-        "ImageUrl": "/images/box.png",
-        "Top": 40,
-        "Left": 75
+        "ImageUrl": "/images/levelItems/livingRoomItem/candle.png",
+        "Top": 47,
+        "Left": 44,
+        "Width": 4
       },
       {
         "Id": 9,
         "Ossetian": "Дæгъæл",
         "Russian": "Ключ",
-        "ImageUrl": "/images/box.png",
-        "Top": 80,
-        "Left": 35
+        "ImageUrl": "/images/levelItems/livingRoomItem/key.png",
+        "Top": 57,
+        "Left": 44,
+        "Width": 6
       }
     ]
   },
@@ -184,81 +193,91 @@
         "Id": 1,
         "Ossetian": "Фонтан",
         "Russian": "Фонтан",
-        "ImageUrl": "/images/box.png",
-        "Top": 45,
-        "Left": 50
+        "ImageUrl": "/images/levelItems/yardItem/fountain.png",
+        "Top": 40,
+        "Left": 33,
+        "Width": 31
       },
       {
         "Id": 2,
         "Ossetian": "Цъай",
         "Russian": "Колодец",
-        "ImageUrl": "/images/box.png",
-        "Top": 50,
-        "Left": 15
+        "ImageUrl": "/images/levelItems/yardItem/pit.png",
+        "Top": 39,
+        "Left": 68,
+        "Width": 24
       },
       {
         "Id": 3,
         "Ossetian": "Ахсæн",
         "Russian": "Скворечник",
-        "ImageUrl": "/images/box.png",
-        "Top": 15,
-        "Left": 75
+        "ImageUrl": "/images/levelItems/yardItem/birdhouse.png",
+        "Top": 19,
+        "Left": 87,
+        "Width": 9
       },
       {
         "Id": 4,
         "Ossetian": "Уис",
         "Russian": "Метла",
-        "ImageUrl": "/images/box.png",
-        "Top": 65,
-        "Left": 80
+        "ImageUrl": "/images/levelItems/yardItem/broomstick.png",
+        "Top": 48,
+        "Left": 0,
+        "Width": 10
       },
       {
         "Id": 5,
         "Ossetian": "Тæскъ",
         "Russian": "Корзина",
-        "ImageUrl": "/images/box.png",
-        "Top": 75,
-        "Left": 65
+        "ImageUrl": "/images/levelItems/yardItem/basket.png",
+        "Top": 77,
+        "Left": 24,
+        "Width": 15
       },
       {
         "Id": 6,
         "Ossetian": "Сугтæ",
         "Russian": "Дрова",
-        "ImageUrl": "/images/box.png",
-        "Top": 70,
-        "Left": 25
+        "ImageUrl": "/images/levelItems/yardItem/firewood.png",
+        "Top": 63,
+        "Left": 82,
+        "Width": 17
       },
       {
         "Id": 7,
         "Ossetian": "Уæрдон",
         "Russian": "Повозка",
-        "ImageUrl": "/images/box.png",
-        "Top": 55,
-        "Left": 35
+        "ImageUrl": "/images/levelItems/yardItem/wagon.png",
+        "Top": 65,
+        "Left": 62,
+        "Width": 38
       },
       {
         "Id": 8,
         "Ossetian": "Дзабри",
         "Russian": "Лейка",
-        "ImageUrl": "/images/box.png",
-        "Top": 80,
-        "Left": 10
+        "ImageUrl": "/images/levelItems/yardItem/leica.png",
+        "Top": 52,
+        "Left": 59,
+        "Width": 10
       },
       {
         "Id": 9,
         "Ossetian": "Халамæрзæн",
         "Russian": "Грабли",
-        "ImageUrl": "/images/box.png",
-        "Top": 60,
-        "Left": 90
+        "ImageUrl": "/images/levelItems/yardItem/rake.png",
+        "Top": 66,
+        "Left": 48,
+        "Width": 13
       },
       {
         "Id": 10,
         "Ossetian": "Чырын",
         "Russian": "Сундук",
-        "ImageUrl": "/images/box.png",
-        "Top": 40,
-        "Left": 70
+        "ImageUrl": "/images/levelItems/yardItem/chest.png",
+        "Top": 88,
+        "Left": 40,
+        "Width": 17
       }
     ]
   }
