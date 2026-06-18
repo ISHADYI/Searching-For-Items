@@ -5,7 +5,7 @@ namespace SearchingForItems.Data
 {
     public class UserRepository
     {
-        private User currentUser;
+        private User currentUser; //123
 
         public UserRepository()
         {
