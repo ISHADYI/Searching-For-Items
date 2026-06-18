@@ -59,13 +59,14 @@ namespace SearchingForItems.Controllers
         }
         public async Task<IActionResult> AddPointsUser()
         {
-            // Получаем id пользователя из сессии
             var userId = HttpContext.Session.GetString("UserId");
+            User currentUser = _userRepository.GetCurrentUser();
+            int userScore = currentUser.Score;
+            var result = await api.AddPointsAsync(userId, 11, userScore); // 11 - id игры
 
-            // Начисляем баллы пользователю
-            var result = await api.AddPointsAsync(userId, 11, 5); // 11 - это id игры на сайте он постоянный
             if (result == true)
                 return Ok();
+
             return BadRequest();
         }
     }
